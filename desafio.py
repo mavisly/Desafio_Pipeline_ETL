@@ -39,3 +39,13 @@ for revisao in info:
     else:
        print("Número inválido")
     
+"""
+Carregamento (load):
+ - Criar um novo arquivo para o armazenamento das revisões pendentes
+"""
+novo_arquivo = open('revisoes_pendentes.csv', 'w', newline='')
+revisoes_pendentes = csv.writer(novo_arquivo, delimiter=',')
+revisoes_pendentes.writerows(tabela)
+
+arquivo.close()
+novo_arquivo.close()
